@@ -61,5 +61,9 @@ to see whether remote called origin exists---> run "git remote"
                                                    "git remote -v"
 Remove the Existing Remote--->run "git remote remove origin"
 
-
+"→ No staged files found.
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)"
+-->git push
 
