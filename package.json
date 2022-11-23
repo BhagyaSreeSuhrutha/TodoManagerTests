@@ -7,6 +7,14 @@
     "test": "jest",
     "prepare": "husky install"
   },
+
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write ."
+    ]
+  },
+
   "author": "Bhagya Sree Suhrutha <bhagyasree.suhrutha@gmail.com>",
   "license": "ISC",
   "devDependencies": {
