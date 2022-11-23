@@ -1,0 +1,60 @@
+--JEST--
+npm install jest --save-dev
+|
+|
+created .gitignore file --->"node_modules/"
+|
+|
+package.json
+Under scripts set -----"test": "jest"
+|
+|
+todo.js
+exporting todoList as module--->module.exports = todoList;
+
+__tests__ folder > todo.js > const todoList = require("../todo");
+|
+|
+
+---pre-commit hook---
+
+husky
+
+npm install husky --save-dev
+npm pkg set scripts.prepare "husky install"
+npm run prepare
+
+To add hook -->npx husky add .husky/pre-commit "npm test"
+git add .husky/pre-commit
+git commit -m "Add pre-commit hook to run tests"
+
+|
+|
+lint-staged
+
+npm install --save-dev lint-staged
+
+Install and configure ESLint--->npm init @eslint/config
+
+Install prettier-->npm install prettier --save-dev
+
+npx husky add .husky/pre-commit "npx link-staged"
+|
+|
+to add all files --> git add --all
+|
+|
+---If Errors---
+
+"husky - pre-commit hook exited with code 1 (error)"
+--> git commit -m "message" --no-verify
+
+"Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue."
+--> deleting index.lock file in .git directory 
+
+
+
