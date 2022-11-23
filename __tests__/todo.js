@@ -21,7 +21,7 @@ describe("Todo Test Suite", () => {
         const yesterday = formattedDate(new Date(new Date().setDate(dateToday.getDate() - 1)));
         const tomorrow = formattedDate(new Date(new Date().setDate(dateToday.getDate() + 1)));
 
-        add({ title: "Test todo", dueDate: new Date().toLocaleDateString("en-CA"), completed: false });
+        add({ title: "Test todo", dueDate: today, completed: false });
         add({ title: 'Submit assignment', dueDate: yesterday, completed: false });
         add({ title: 'Pay rent', dueDate: today, completed: true });
         add({ title: 'Service Vehicle', dueDate: today, completed: false });
@@ -32,9 +32,9 @@ describe("Todo Test Suite", () => {
 
     test("Should add a new todo", () => {
         const todoItemsCount = all.length;
-        expect(all.length).toBe(1);
+        expect(all.length).toBe(6);
         add({
-            title: "Test todo",
+            title: "Test todo add",
             completed: false,
             // eslint-disable-next-line comma-dangle
             dueDate: new Date().toLocaleDateString("en-CA"),
@@ -53,7 +53,7 @@ describe("Todo Test Suite", () => {
     });
 
     test("Retrievel of due today items", () => {
-        expect(dueToday().length).toBe(3);
+        expect(dueToday().length).toBe(4);
     });
 
     test("Retrievel of due later items", () => {
