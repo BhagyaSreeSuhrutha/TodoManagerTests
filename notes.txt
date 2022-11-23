@@ -56,5 +56,10 @@ may have crashed in this repository earlier:
 remove the file manually to continue."
 --> deleting index.lock file in .git directory 
 
+"error: remote origin already exists."
+to see whether remote called origin exists---> run "git remote"
+                                                   "git remote -v"
+Remove the Existing Remote--->run "git remote remove origin"
+
 
 
